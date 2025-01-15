@@ -16,5 +16,11 @@ namespace Hastane_Projesi
         {
             InitializeComponent();
         }
+
+        private void LnkUyeOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmHastaKayit fr = new FrmHastaKayit();
+            fr.Show();
+        }
     }
 }

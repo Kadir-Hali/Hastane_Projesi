@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hastane_Projesi
 {
@@ -15,6 +16,11 @@ namespace Hastane_Projesi
         public FrmHastaKayit()
         {
             InitializeComponent();
+        }
+
+        private void BtnKayitYap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

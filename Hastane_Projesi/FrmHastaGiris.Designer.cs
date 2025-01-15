@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MskTC = new System.Windows.Forms.MaskedTextBox();
@@ -43,7 +44,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(53, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 44);
+            this.label1.Size = new System.Drawing.Size(358, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hasta Giriş Paneli";
             // 
@@ -52,7 +53,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(155, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "TC Kimlik No :";
             // 
@@ -61,7 +62,7 @@
             this.MskTC.Location = new System.Drawing.Point(141, 75);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
-            this.MskTC.Size = new System.Drawing.Size(132, 31);
+            this.MskTC.Size = new System.Drawing.Size(132, 36);
             this.MskTC.TabIndex = 2;
             this.MskTC.ValidatingType = typeof(int);
             // 
@@ -70,7 +71,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(80, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 23);
+            this.label3.Size = new System.Drawing.Size(71, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Şifre :";
             // 
@@ -78,7 +79,7 @@
             // 
             this.txtSifre.Location = new System.Drawing.Point(141, 121);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(132, 31);
+            this.txtSifre.Size = new System.Drawing.Size(132, 36);
             this.txtSifre.TabIndex = 4;
             // 
             // BtnGirisYap
@@ -95,15 +96,18 @@
             this.LnkUyeOl.AutoSize = true;
             this.LnkUyeOl.Location = new System.Drawing.Point(75, 182);
             this.LnkUyeOl.Name = "LnkUyeOl";
-            this.LnkUyeOl.Size = new System.Drawing.Size(59, 23);
+            this.LnkUyeOl.Size = new System.Drawing.Size(77, 29);
             this.LnkUyeOl.TabIndex = 6;
             this.LnkUyeOl.TabStop = true;
             this.LnkUyeOl.Text = "Üye ol";
+            this.LnkUyeOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkUyeOl_LinkClicked);
             // 
             // FrmHastaGiris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AcceptButton = this.BtnGirisYap;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(384, 262);
             this.Controls.Add(this.LnkUyeOl);
@@ -114,7 +118,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "Hasta Giriş Ekranı";
             this.ResumeLayout(false);
