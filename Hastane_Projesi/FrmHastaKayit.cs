@@ -22,7 +22,7 @@ namespace Hastane_Projesi
 
         private void BtnKayitYap_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into Tbl_Hastalar (HastaAd,HastaSoyad,HastaTC,HastaTelefon),HastaSifre,HastaCinsiyet) values (@p1,@p2,@p3,@p4,@p5,@p6)", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("insert into Tbl_Hastalar (HastaAd, HastaSoyad, HastaTC, HastaTelefon, HastaSifre, HastaCinsiyet) values (@p1,@p2,@p3,@p4,@p5,@p6)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3", MskTC.Text);

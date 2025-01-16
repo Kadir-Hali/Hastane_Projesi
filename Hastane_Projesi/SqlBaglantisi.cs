@@ -12,7 +12,7 @@ namespace Hastane_Projesi
     {
         public SqlConnection baglanti()
         {
-            SqlConnection baglan = new SqlConnection("Data Source=Kadir;Initial Catalog=HastaneProje;Integrated Security=True;Trust Server Certificate=True");
+            SqlConnection baglan = new SqlConnection("Data Source=Kadir;Initial Catalog=HastaneProje;Integrated Security=True");
             baglan.Open();
             return baglan;
         }
