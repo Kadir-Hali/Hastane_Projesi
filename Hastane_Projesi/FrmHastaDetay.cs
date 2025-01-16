@@ -37,7 +37,7 @@ namespace Hastane_Projesi
 
             //Randevu Geçmişi
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Randevular where HastaTC='"+tc, bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Randevular where HastaTC="+tc, bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -67,7 +67,17 @@ namespace Hastane_Projesi
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Randevular where RandevuBrans='"+CmbBrans.Text+"'",bgl.baglanti());
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
+
+        private void LnkBilgileriniDuzenle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmBilgiDuzenle fr = new FrmBilgiDuzenle();
+            fr.TCno = LblTC.Text;
+            fr.Show();
+            
         }
     }
 }

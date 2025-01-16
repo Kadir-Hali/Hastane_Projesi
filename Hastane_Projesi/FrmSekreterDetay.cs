@@ -16,5 +16,10 @@ namespace Hastane_Projesi
         {
             InitializeComponent();
         }
+        public string TCnumara;
+        private void FrmSekreterDetay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

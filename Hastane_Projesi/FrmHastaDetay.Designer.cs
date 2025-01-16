@@ -133,6 +133,7 @@
             this.LnkBilgileriniDuzenle.TabIndex = 20;
             this.LnkBilgileriniDuzenle.TabStop = true;
             this.LnkBilgileriniDuzenle.Text = "Bilgilerini Düzenle";
+            this.LnkBilgileriniDuzenle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkBilgileriniDuzenle_LinkClicked);
             // 
             // label9
             // 
