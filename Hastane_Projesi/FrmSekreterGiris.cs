@@ -28,6 +28,7 @@ namespace Hastane_Projesi
             if (dr.Read())
             {
                 FrmSekreterDetay fr = new FrmSekreterDetay();
+                fr.TCnumara = MskTC.Text;
                 fr.Show();
                 this.Hide();
             }
