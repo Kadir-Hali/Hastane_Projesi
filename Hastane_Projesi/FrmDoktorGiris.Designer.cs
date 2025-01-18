@@ -43,7 +43,7 @@
             this.LnkUyeOl.AutoSize = true;
             this.LnkUyeOl.Location = new System.Drawing.Point(78, 184);
             this.LnkUyeOl.Name = "LnkUyeOl";
-            this.LnkUyeOl.Size = new System.Drawing.Size(59, 23);
+            this.LnkUyeOl.Size = new System.Drawing.Size(77, 29);
             this.LnkUyeOl.TabIndex = 13;
             this.LnkUyeOl.TabStop = true;
             this.LnkUyeOl.Text = "Üye ol";
@@ -62,8 +62,9 @@
             // 
             this.txtSifre.Location = new System.Drawing.Point(144, 123);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(132, 31);
+            this.txtSifre.Size = new System.Drawing.Size(132, 36);
             this.txtSifre.TabIndex = 11;
+            this.txtSifre.Text = "3333";
             this.txtSifre.UseSystemPasswordChar = true;
             // 
             // label3
@@ -71,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(83, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 23);
+            this.label3.Size = new System.Drawing.Size(71, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Şifre :";
             // 
@@ -80,8 +81,9 @@
             this.MskTC.Location = new System.Drawing.Point(144, 77);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
-            this.MskTC.Size = new System.Drawing.Size(132, 31);
+            this.MskTC.Size = new System.Drawing.Size(132, 36);
             this.MskTC.TabIndex = 9;
+            this.MskTC.Text = "33333333333";
             this.MskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -89,7 +91,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(155, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "TC Kimlik No :";
             // 
@@ -99,14 +101,14 @@
             this.label1.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(56, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 44);
+            this.label1.Size = new System.Drawing.Size(383, 57);
             this.label1.TabIndex = 7;
             this.label1.Text = "Doktor Giriş Paneli";
             // 
             // FrmDoktorGiris
             // 
             this.AcceptButton = this.BtnGirisYap;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkTurquoise;

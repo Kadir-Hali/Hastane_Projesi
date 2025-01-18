@@ -25,7 +25,28 @@ namespace Hastane_Projesi
 
             //Doktor Ad Soyad
             SqlCommand komut = new SqlCommand("Select DoktorAd, DoktorSoyad from Tbl_Doktorlar where DoktorTC=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", LblTC.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read()) 
+            {
+                LblAdSoyad.Text = dr[0] + " " + dr[1];
+            }
+            bgl.baglanti().Close();
 
+            //Randevular
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where RandevuDoktor='" + LblAdSoyad.Text + "'", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmDoktorBilgiDuzenle fr = new FrmDoktorBilgiDuzenle();
+            fr.TCNo = LblTC.Text;
+            fr.Show();
         }
     }
 }
