@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblAdSoyad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@
             this.LblAdSoyad.AutoSize = true;
             this.LblAdSoyad.Location = new System.Drawing.Point(109, 71);
             this.LblAdSoyad.Name = "LblAdSoyad";
-            this.LblAdSoyad.Size = new System.Drawing.Size(100, 29);
+            this.LblAdSoyad.Size = new System.Drawing.Size(76, 23);
             this.LblAdSoyad.TabIndex = 16;
             this.LblAdSoyad.Text = "Null Null";
             // 
@@ -75,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 29);
+            this.label2.Size = new System.Drawing.Size(93, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Ad Soyad :";
             // 
@@ -84,7 +85,7 @@
             this.LblTC.AutoSize = true;
             this.LblTC.Location = new System.Drawing.Point(109, 37);
             this.LblTC.Name = "LblTC";
-            this.LblTC.Size = new System.Drawing.Size(145, 29);
+            this.LblTC.Size = new System.Drawing.Size(120, 23);
             this.LblTC.TabIndex = 14;
             this.LblTC.Text = "00000000000";
             // 
@@ -93,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 29);
+            this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 13;
             this.label4.Text = "TC NO :";
             // 
@@ -110,9 +111,9 @@
             // RchSikayet
             // 
             this.RchSikayet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RchSikayet.Location = new System.Drawing.Point(3, 32);
+            this.RchSikayet.Location = new System.Drawing.Point(3, 27);
             this.RchSikayet.Name = "RchSikayet";
-            this.RchSikayet.Size = new System.Drawing.Size(288, 144);
+            this.RchSikayet.Size = new System.Drawing.Size(288, 149);
             this.RchSikayet.TabIndex = 18;
             this.RchSikayet.Text = "";
             // 
@@ -130,11 +131,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(672, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(672, 386);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -156,6 +158,7 @@
             this.BtnCikis.TabIndex = 4;
             this.BtnCikis.Text = "Çıkış";
             this.BtnCikis.UseVisualStyleBackColor = true;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
             // 
             // BtnDuyurular
             // 
@@ -165,6 +168,7 @@
             this.BtnDuyurular.TabIndex = 2;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // BtnGuncelle
             // 
@@ -179,8 +183,9 @@
             // 
             // FrmDoktorDetay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1003, 444);
             this.Controls.Add(this.groupBox4);
@@ -188,9 +193,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorDetay";
-            this.Text = "FrmDoktorDetay";
+            this.Text = "Doktor Detay ";
             this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
